@@ -1,0 +1,19 @@
+.myPosts {
+    padding-bottom: 40px;
+}
+
+.news {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+}
+
+.form {
+    text-align: end;
+}
+
+.button {
+    padding: 3px 10px;
+}
+
+

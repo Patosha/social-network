@@ -1,36 +1,38 @@
+import styles from './Profile.module.css';
+
 const Profile = () => {
     return (
-        <div className="profile">
-            <img className="profile__avatar"
+        <div className={styles.profile}>
+            <img className={styles.avatar}
                  src="https://st3.depositphotos.com/2788703/16692/i/600/depositphotos_166923204-stock-photo-digital-illustration-of-a-lion.jpg"
                  alt="avatar"/>
-            <div className="profile__info">
-                <h3 className="profile__title">
+            <div className={styles.info}>
+                <h3 className={styles.title}>
                     Anton Fedorov
                 </h3>
-                <ul className="profile__list list-reset">
-                    <li className="profile__item">
+                <ul className={`${styles.list} ${styles.list_reset}`}>
+                    <li className={styles.item}>
                         Date of Birth:
-                        <span className="profile__text">
+                        <span className={styles.text}>
                             12.05.1986
                         </span>
                     </li>
-                    <li className="profile__item">
+                    <li className={styles.item}>
                         Сity:
-                        <span className="profile__text">
+                        <span className={styles.text}>
                             Pskov
                         </span>
                     </li>
-                    <li className="profile__item">
+                    <li className={styles.item}>
                         Education:
-                        <span className="profile__text">
+                        <span className={styles.text}>
                             PSU'2025
                         </span>
                     </li>
-                    <li className="profile__item">
+                    <li className={styles.item}>
                         Web site:
-                        <a className="profile__link" href="#">
-                            <span className="profile__text">
+                        <a className={styles.link} href="#">
+                            <span className={styles.text}>
                                 https://it-incubator.ru/
                             </span>
                         </a>

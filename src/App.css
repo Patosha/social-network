@@ -30,12 +30,6 @@ button {
     color: inherit;
 }
 
-.list-reset {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
 .btn-reset {
     padding: 0;
     border: none;
@@ -47,8 +41,8 @@ button {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0;
-    grid-row-gap: 0;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 .container {
@@ -57,33 +51,10 @@ button {
     margin: 0 auto;
 }
 
-.header {
-    grid-area: 1 / 1 / 2 / 6;
-    background-color: antiquewhite;
-}
-
-.sidebar {
-    grid-area: 2 / 1 / 6 / 2;
-    background-color: aqua;
-}
-
 .hero {
     grid-area: 2 / 2 / 5 / 6;
     background-color: bisque;
+    padding: 30px 10px 0 10px;
 }
 
-.profile {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.profile__avatar {
-    width: 100px;
-    height: 100px;
-}
-
-.footer {
-    grid-area: 5 / 2 / 6 / 6;
-    background-color: blue;
-}
 

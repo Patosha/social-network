@@ -1,0 +1,4 @@
+.header {
+    grid-area: 1 / 1 / 2 / 6;
+    background-color: antiquewhite;
+}
