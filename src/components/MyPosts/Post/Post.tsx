@@ -1,6 +1,10 @@
 import styles from './Post.module.css';
 
-const Post = () => {
+type PostPropsType = {
+    message: string
+}
+
+const Post = (props:PostPropsType) => {
     return (
         <div className={styles.post}>
 
@@ -17,9 +21,7 @@ const Post = () => {
                 </time>
 
                 <p className={styles.text}>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, animi aspernatur consectetur
-                    ea eveniet fugit neque officiis optio reprehenderit sapiente. Dolores, id, omnis? Ab
-                    adipisci at hic labore reprehenderit temporibus.
+                    {props.message}
                 </p>
 
                 <button className={styles.like}>
