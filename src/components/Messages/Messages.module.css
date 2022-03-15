@@ -1,4 +1,25 @@
-.wrap {
-    background-color: brown;
-    width: 100%;
+.item {
+    max-width: 500px;
+    background-color: #5c5a5a;
+    color: #fff;
+    padding: 20px;
+    border-bottom: 2px solid bisque;
+}
+.messageTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    margin: 0;
+}
+
+.time {
+    display: inline-block;
+}
+
+.text {
+    margin: 0;
 }

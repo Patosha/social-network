@@ -6,7 +6,7 @@ const Sidebar = () => {
         <section className={styles.sidebar}>
 
             <nav className={styles.nav}>
-                <ul className={`${styles.list} ${styles.list_reset}`}>
+                <ul className={`${styles.list} list_reset`}>
 
                     <li className={styles.item}>
                         <NavLink className={styles.link} to="/profile" activeClassName={styles.active}>
