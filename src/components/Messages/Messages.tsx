@@ -1,14 +1,21 @@
+import {NavLink} from 'react-router-dom';
 import styles from './Messages.module.css';
 
 const Messages = () => {
     return (
         <ul className={`${styles.list} list_reset`}>
             <li className={styles.item}>
-                <img className={styles.avatar} src="" alt=""/>
+
+                <div className={styles.avatar}>
+                    <img className={styles.img}
+                         src="https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg"
+                         alt=""/>
+                </div>
+
                 <div className={styles.messageTop}>
-                    <h3 className={styles.title}>
+                    <NavLink className={styles.title} to='/messages/1'>
                         Ivanov Ivan
-                    </h3>
+                    </NavLink>
                     <span className={styles.time}>
                         23:15
                     </span>
@@ -19,11 +26,13 @@ const Messages = () => {
                 </p>
             </li>
             <li className={styles.item}>
-                <img className={styles.avatar} src="" alt=""/>
+                <img className={styles.img}
+                     src="https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg"
+                     alt=""/>
                 <div className={styles.messageTop}>
-                    <h3 className={styles.title}>
+                    <NavLink className={styles.title} to='/messages/2'>
                         Ivanov Ivan
-                    </h3>
+                    </NavLink>
                     <span className={styles.time}>
                         23:15
                     </span>
