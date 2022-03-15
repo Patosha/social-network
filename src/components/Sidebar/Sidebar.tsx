@@ -1,3 +1,4 @@
+import {NavLink} from 'react-router-dom';
 import styles from './Sidebar.module.css';
 
 const Sidebar = () => {
@@ -6,34 +7,38 @@ const Sidebar = () => {
 
             <nav className={styles.nav}>
                 <ul className={`${styles.list} ${styles.list_reset}`}>
+
                     <li className={styles.item}>
-                        <a className={styles.link} href="#">
+                        <NavLink className={styles.link} to="/profile" activeClassName={styles.active}>
                             Profile
-                        </a>
+                        </NavLink>
                     </li>
+
                     <li className={styles.item}>
-                        <a className={styles.link} href="#">
+                        <NavLink className={styles.link} to="/messages" activeClassName={styles.active}>
                             Messages
-                        </a>
+                        </NavLink>
                     </li>
+
                     <li className={styles.item}>
-                        <a className={styles.link} href="#">
+                        <NavLink className={styles.link} to="/news" activeClassName={styles.active}>
                             News
-                        </a>
+                        </NavLink>
                     </li>
+
                     <li className={styles.item}>
-                        <a className={styles.link} href="#">
+                        <NavLink className={styles.link} to="/music" activeClassName={styles.active}>
                             Music
-                        </a>
+                        </NavLink>
                     </li>
+
                     <li className={styles.item}>
-                        <a className={styles.link} href="#">
+                        <NavLink className={styles.link} to="/settings" activeClassName={styles.active}>
                             Settings
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>
-
         </section>
     )
 }

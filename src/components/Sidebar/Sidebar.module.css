@@ -23,4 +23,14 @@
 .link {
     padding: 5px;
     background-color: aliceblue;
+    transition: background-color 0.5s;
+}
+
+.link:hover {
+    background-color: brown;
+}
+
+.active {
+    color: blueviolet;
+    background-color: brown;
 }
