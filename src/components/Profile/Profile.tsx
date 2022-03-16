@@ -14,29 +14,29 @@ const Profile = () => {
                     </h3>
                     <ul className={`${styles.list} ${styles.list_reset}`}>
                         <li className={styles.item}>
-                            Date of Birth:
                             <span className={styles.text}>
+                                Date of Birth:
+                            </span>
                             12.05.1986
-                        </span>
                         </li>
                         <li className={styles.item}>
-                            Сity:
                             <span className={styles.text}>
+                             Сity:
+                        </span>
                             Pskov
-                        </span>
                         </li>
                         <li className={styles.item}>
-                            Education:
                             <span className={styles.text}>
-                            PSU'2025
+                            Education:
                         </span>
+                            PSU'2025
                         </li>
                         <li className={styles.item}>
-                            Web site:
                             <a className={styles.link} href="#">
                             <span className={styles.text}>
-                                https://it-incubator.ru/
+                                  Web site:
                             </span>
+                                https://it-incubator.ru/
                             </a>
                         </li>
                     </ul>

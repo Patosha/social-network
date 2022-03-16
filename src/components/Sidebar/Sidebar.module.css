@@ -2,6 +2,7 @@
     grid-area: 2 / 1 / 2 / 2;
     background-color: rgb(35, 35, 36);
     padding: 30px;
+    border-radius: 6px;
 }
 
 .list {
@@ -15,9 +16,10 @@
 }
 
 .link {
-    padding: 5px;
+    padding: 10px;
     color: #fff;
     transition: background-color 0.5s;
+    border-radius: 6px;
 }
 
 .link:hover {

@@ -6,6 +6,7 @@
     color: #fff;
     padding: 20px;
     margin-bottom: 100px;
+    border-radius: 6px;
 }
 
 .avatar {
@@ -19,4 +20,13 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text {
+    margin-right: 20px;
 }

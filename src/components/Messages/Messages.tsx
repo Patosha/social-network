@@ -6,7 +6,7 @@ const messageData = {
     avatar: "https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg",
     name: 'Ivanov Ivan',
     time: '23:15',
-    text: 'How are you?',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, autem commodi culpa deleniti error incidunt maxime, nihil nisi officia quam quis reprehenderit sit! Accusamus facilis iste nesciunt similique sint ullam.',
     id: 1
 }
 
