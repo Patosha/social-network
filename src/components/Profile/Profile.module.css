@@ -2,7 +2,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    padding-bottom: 40px;
+    background-color: rgb(35, 35, 36);
+    color: #fff;
+    padding: 20px;
+    margin-bottom: 100px;
 }
 
 .avatar {

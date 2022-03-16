@@ -1,4 +1,5 @@
 .header {
     grid-area: 1 / 1 / 2 / 4;
-    background-color: antiquewhite;
+    background-color: rgb(35, 35, 36);
+    padding: 30px;
 }

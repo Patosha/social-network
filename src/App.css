@@ -59,8 +59,8 @@ button {
 
 .hero {
     grid-area: 2 / 2 / 4 / 4;;
-    background-color: bisque;
-    padding: 30px 10px 0 10px;
+    background-color: #000;
+    padding: 30px;
 }
 
 
