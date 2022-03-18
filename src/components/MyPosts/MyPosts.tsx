@@ -7,7 +7,7 @@ const MyPosts = () => {
         {
             id: 1,
             name: 'Klark Kent',
-            avatar: 'https://e7.pngegg.com/pngimages/876/481/png-clipart-tom-welling-smallville-clark-kent-superman-fireworks-s-heroes-krypton.png',
+            avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/01/man-ava5.jpg',
             date: '18 ноября 2015',
             text: 'Ку!',
             likesCount: 12,
@@ -15,12 +15,23 @@ const MyPosts = () => {
         {
             id: 2,
             name: 'Lex Luthor',
-            avatar: 'https://www.peoples.ru/art/cinema/characters/lex_luthor/luthor_1.jpg',
+            avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/02/avatarka-dlya-skaypa-dlya-parney.jpg',
             date: '18 декабря 2015',
             text: 'Как дела?',
             likesCount: 10,
         },
     ]
+
+    let postsElements = postsDate.map(post =>
+        <Post
+            id={post.id}
+            name={post.name}
+            avatar={post.avatar}
+            date={post.date}
+            text={post.text}
+            likesCount={post.likesCount}
+        />
+    )
 
     return (
         <div className={styles.myPosts}>
@@ -38,23 +49,7 @@ const MyPosts = () => {
                 </button>
             </form>
 
-            <Post
-                id={postsDate[0].id}
-                name={postsDate[0].name}
-                avatar={postsDate[0].avatar}
-                date={postsDate[0].date}
-                text={postsDate[0].text}
-                likesCount={postsDate[0].likesCount}
-            />
-            <Post
-                id={postsDate[1].id}
-                name={postsDate[1].name}
-                avatar={postsDate[1].avatar}
-                date={postsDate[1].date}
-                text={postsDate[1].text}
-                likesCount={postsDate[1].likesCount}
-            />
-
+            {postsElements}
         </div>
     )
 }

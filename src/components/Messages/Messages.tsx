@@ -3,11 +3,11 @@ import styles from './Messages.module.css';
 import React from "react";
 
 type messageDataType = {
+    id: number
     avatar: string
     name: string
     time: string
     text: string
-    id: number
 }
 
 const MessageItem = (props: messageDataType) => {
@@ -38,7 +38,7 @@ const MessageItem = (props: messageDataType) => {
 
 const Messages = () => {
 
-    let messageData = [
+    let messagesData = [
         {
             id: 1,
             avatar: "https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg",
@@ -62,29 +62,19 @@ const Messages = () => {
         },
     ]
 
+    let messagesElements = messagesData.map(message =>
+        <MessageItem
+            id={message.id}
+            avatar={message.avatar}
+            name={message.name}
+            time={message.time}
+            text={message.text}
+        />
+    )
+
     return (
         <ul className={`${styles.list} list_reset`}>
-            <MessageItem
-                id={messageData[0].id}
-                avatar={messageData[0].avatar}
-                name={messageData[0].name}
-                time={messageData[0].time}
-                text={messageData[0].text}
-            />
-            <MessageItem
-                id={messageData[1].id}
-                avatar={messageData[1].avatar}
-                name={messageData[1].name}
-                time={messageData[1].time}
-                text={messageData[1].text}
-            />
-            <MessageItem
-                id={messageData[2].id}
-                avatar={messageData[2].avatar}
-                name={messageData[2].name}
-                time={messageData[2].time}
-                text={messageData[2].text}
-            />
+            {messagesElements}
         </ul>
     )
 }
