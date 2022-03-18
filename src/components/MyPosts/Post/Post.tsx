@@ -1,8 +1,12 @@
 import styles from './Post.module.css';
 
 type PostPropsType = {
-    message: string
     id: number
+    name: string
+    avatar: string
+    date: string
+    text: string
+    likesCount: number
 }
 
 const Post = (props: PostPropsType) => {
@@ -11,25 +15,25 @@ const Post = (props: PostPropsType) => {
         <div className={styles.post}>
 
             <img className={styles.avatar}
-                 src={`${postDate[0].avatar}`} alt="avatar"/>
+                 src={`${props.avatar}`} alt="avatar"/>
 
             <div className={styles.content}>
 
                 <h3 className={styles.name}>
-                    {postDate[0].name}
+                    {props.name}
                 </h3>
 
                 <time className={styles.date} dateTime="2015-11-18">
-                    {postDate[0].date}
+                    {props.date}
                 </time>
 
                 <p className={styles.text}>
-                    {postDate[0].text}
+                    {props.text}
                 </p>
 
                 <button className={styles.like}>
                     like_
-                    {postDate[0].likesCount}
+                    {props.likesCount}
                 </button>
             </div>
         </div>

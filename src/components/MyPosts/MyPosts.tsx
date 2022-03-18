@@ -38,8 +38,23 @@ const MyPosts = () => {
                 </button>
             </form>
 
-            <Post message={postsDate[0].id}/>
-            <Post message='Ку!'/>
+            <Post
+                id={postsDate[0].id}
+                name={postsDate[0].name}
+                avatar={postsDate[0].avatar}
+                date={postsDate[0].date}
+                text={postsDate[0].text}
+                likesCount={postsDate[0].likesCount}
+            />
+            <Post
+                id={postsDate[1].id}
+                name={postsDate[1].name}
+                avatar={postsDate[1].avatar}
+                date={postsDate[1].date}
+                text={postsDate[1].text}
+                likesCount={postsDate[1].likesCount}
+            />
+
         </div>
     )
 }
