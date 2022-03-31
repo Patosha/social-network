@@ -22,7 +22,7 @@ const MyPosts = () => {
         },
     ]
 
-    let postsElements = postsDate.map(post =>
+    let postsElements = postsDate.map((post) =>
         <Post
             id={post.id}
             name={post.name}
