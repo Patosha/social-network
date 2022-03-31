@@ -1,6 +1,6 @@
 import styles from './Post.module.css';
 
-type PostPropsType = {
+export type PostPropsType = {
     id: number
     name: string
     avatar: string

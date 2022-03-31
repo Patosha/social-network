@@ -2,7 +2,7 @@ import styles from "./Messages.module.css";
 import {NavLink} from "react-router-dom";
 import React from "react";
 
-type messageDataType = {
+export type MessageDataType = {
     id: number
     avatar: string
     name: string
@@ -10,7 +10,7 @@ type messageDataType = {
     text: string
 }
 
-export const MessageItem = (props: messageDataType) => {
+export const MessageItem = (props: MessageDataType) => {
     return (
         <li className={styles.item}>
 

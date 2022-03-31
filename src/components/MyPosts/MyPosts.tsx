@@ -1,26 +1,9 @@
 import styles from './MyPosts.module.css';
 import Post from "./Post/Post";
 import React from "react";
+import {postsDate} from "../../index";
 
-const MyPosts = () => {
-    let postsDate = [
-        {
-            id: 1,
-            name: 'Klark Kent',
-            avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/01/man-ava5.jpg',
-            date: '18 ноября 2015',
-            text: 'Ку!',
-            likesCount: 12,
-        },
-        {
-            id: 2,
-            name: 'Lex Luthor',
-            avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/02/avatarka-dlya-skaypa-dlya-parney.jpg',
-            date: '18 декабря 2015',
-            text: 'Как дела?',
-            likesCount: 10,
-        },
-    ]
+const MyPosts = (props:) => {
 
     let postsElements = postsDate.map((post) =>
         <Post

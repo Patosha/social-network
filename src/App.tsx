@@ -8,8 +8,13 @@ import {BrowserRouter, Route} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import {MessageDataType} from "./components/Messages/MessageItem";
+import {PostPropsType} from "./components/MyPosts/Post/Post";
 
-const App = () => {
+
+
+
+const App = (props: PostPropsType, props: MessageDataType) => {
     return (
         <BrowserRouter>
             <div className="container">
@@ -19,11 +24,11 @@ const App = () => {
                     <Sidebar/>
 
                     <section className="hero">
-                        <Route path='/profile' component={Profile}/>
-                        <Route path='/messages' component={Messages}/>
-                        <Route path='/news' component={News}/>
-                        <Route path='/music' component={Music}/>
-                        <Route path='/settings' component={Settings}/>
+                        <Route path='/profile' render={() => <Profile/>}/>
+                        <Route path='/messages' render={() => <Messages messagesData={messagesData}/>}/>
+                        <Route path='/news' render={() => <News/>}/>
+                        <Route path='/music' render={() => <Music/>}/>
+                        <Route path='/settings' render={() => <Settings/>}/>
                     </section>
                 </div>
             </div>
