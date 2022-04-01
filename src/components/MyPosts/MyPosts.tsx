@@ -1,13 +1,23 @@
 import styles from './MyPosts.module.css';
-import Post from "./Post/Post";
 import React from "react";
-import {postsDate} from "../../index";
+import Post from "./Post/Post";
+import {PostsDatePropsType} from "../../index";
 
-const MyPosts = (props:) => {
+export type MyPostsTypeProps = {
+    id: number
+    name: string
+    avatar: string
+    date: string
+    text: string
+    likesCount: number
+    postsData: Array<PostsDatePropsType>
+}
 
-    let postsElements = postsDate.map((post) =>
+const MyPosts = (props: MyPostsTypeProps) => {
+    let postsElements = props.postsData.map((post) =>
+
         <Post
-            id={post.id}
+            id={props.id}
             name={post.name}
             avatar={post.avatar}
             date={post.date}

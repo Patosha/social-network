@@ -3,7 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-let postsDate = [
+export type MessageDataPropsType = {
+    id: number
+    avatar: string
+    name: string
+    time: string
+    text: string
+}
+
+export type PostsDatePropsType = {
+    id: number
+    name: string
+    avatar: string
+    date: string
+    text: string
+    likesCount: number
+}
+
+let postsDate: Array<PostsDatePropsType> = [
     {
         id: 1,
         name: 'Klark Kent',
@@ -22,7 +39,7 @@ let postsDate = [
     },
 ]
 
-let messagesData = [
+let messagesData: Array<MessageDataPropsType> = [
     {
         id: 1,
         avatar: "https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg",
@@ -48,7 +65,7 @@ let messagesData = [
 
 ReactDOM.render(
     <App
-        postsDate={postsDate}
+        postsData={postsDate}
         messagesData={messagesData}
     />,
     document.getElementById('root')

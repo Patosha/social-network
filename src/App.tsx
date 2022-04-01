@@ -8,13 +8,20 @@ import {BrowserRouter, Route} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {MessageDataType} from "./components/Messages/MessageItem";
-import {PostPropsType} from "./components/MyPosts/Post/Post";
+import {MessageDataPropsType, PostsDatePropsType} from "./index";
 
+export type AppPropsType = {
+    postsData: Array<PostsDatePropsType>
+    messagesData: Array<MessageDataPropsType>
+    id: number
+    name: string
+    avatar: string
+    date: string
+    text: string
+    likesCount: number
+}
 
-
-
-const App = (props: PostPropsType, props: MessageDataType) => {
+const App = (props: AppPropsType) => {
     return (
         <BrowserRouter>
             <div className="container">
@@ -24,8 +31,8 @@ const App = (props: PostPropsType, props: MessageDataType) => {
                     <Sidebar/>
 
                     <section className="hero">
-                        <Route path='/profile' render={() => <Profile/>}/>
-                        <Route path='/messages' render={() => <Messages messagesData={messagesData}/>}/>
+                        <Route path='/profile' render={() => <Profile postsDate={props.postsData}/>}/>
+                        <Route path='/messages' render={() => <Messages messagesData={props.messagesData}/>}/>
                         <Route path='/news' render={() => <News/>}/>
                         <Route path='/music' render={() => <Music/>}/>
                         <Route path='/settings' render={() => <Settings/>}/>

@@ -1,6 +1,6 @@
 import styles from './Post.module.css';
 
-export type PostPropsType = {
+export type PostTypeProps = {
     id: number
     name: string
     avatar: string
@@ -9,8 +9,7 @@ export type PostPropsType = {
     likesCount: number
 }
 
-const Post = (props: PostPropsType) => {
-
+const Post = (props: PostTypeProps) => {
     return (
         <div className={styles.post}>
 
