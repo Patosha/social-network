@@ -20,7 +20,7 @@ export const MessageItem = (props:MessageItemTypeProps) => {
                 <div className={styles.messageTop}>
 
                     <NavLink className={styles.title} to={'/messages/' + props.id}>
-                        {props.id}
+                        {props.name}
                     </NavLink>
 
                     <span className={styles.time}>

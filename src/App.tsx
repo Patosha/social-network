@@ -13,12 +13,6 @@ import {MessageDataPropsType, PostsDatePropsType} from "./index";
 export type AppPropsType = {
     postsData: Array<PostsDatePropsType>
     messagesData: Array<MessageDataPropsType>
-    id: number
-    name: string
-    avatar: string
-    date: string
-    text: string
-    likesCount: number
 }
 
 const App = (props: AppPropsType) => {
@@ -31,7 +25,7 @@ const App = (props: AppPropsType) => {
                     <Sidebar/>
 
                     <section className="hero">
-                        <Route path='/profile' render={() => <Profile postsDate={props.postsData}/>}/>
+                        <Route path='/profile' render={() => <Profile postsData={props.postsData}/>}/>
                         <Route path='/messages' render={() => <Messages messagesData={props.messagesData}/>}/>
                         <Route path='/news' render={() => <News/>}/>
                         <Route path='/music' render={() => <Music/>}/>

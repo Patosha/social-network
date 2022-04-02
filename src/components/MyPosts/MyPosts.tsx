@@ -4,12 +4,6 @@ import Post from "./Post/Post";
 import {PostsDatePropsType} from "../../index";
 
 export type MyPostsTypeProps = {
-    id: number
-    name: string
-    avatar: string
-    date: string
-    text: string
-    likesCount: number
     postsData: Array<PostsDatePropsType>
 }
 
@@ -17,7 +11,7 @@ const MyPosts = (props: MyPostsTypeProps) => {
     let postsElements = props.postsData.map((post) =>
 
         <Post
-            id={props.id}
+            id={post.id}
             name={post.name}
             avatar={post.avatar}
             date={post.date}

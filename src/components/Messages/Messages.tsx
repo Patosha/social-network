@@ -4,11 +4,6 @@ import {MessageItem} from "./MessageItem";
 import {MessageDataPropsType} from "../../index";
 
 export type MessagesTypeProps = {
-    id: number
-    avatar: string
-    name: string
-    time: string
-    text: string
     messagesData: Array<MessageDataPropsType>
 }
 

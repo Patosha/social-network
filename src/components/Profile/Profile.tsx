@@ -4,12 +4,6 @@ import {PostsDatePropsType} from "../../index";
 
 export type ProfilePropsType = {
     postsData: Array<PostsDatePropsType>
-    id: number
-    name: string
-    avatar: string
-    date: string
-    text: string
-    likesCount: number
 }
 
 const Profile = (props: ProfilePropsType) => {
@@ -63,12 +57,6 @@ const Profile = (props: ProfilePropsType) => {
             </div>
 
             <MyPosts
-                id={props.id}
-                name={props.name}
-                avatar={props.avatar}
-                date={props.date}
-                text={props.text}
-                likesCount={props.likesCount}
                 postsData={props.postsData}
             />
         </>
