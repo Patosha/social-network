@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from "../render";
+
 export type MessageDataPropsType = {
     id: number
     avatar: string
@@ -104,4 +106,18 @@ export let state: StatePropsType = {
     //         },
     //     ]
     // }
+}
+
+export const addPost = (messageText: string) => {
+
+    let newPost = {
+        id: 5,
+        name: 'Klark Kent',
+        avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/01/man-ava5.jpg',
+        date: '18 июня 2020',
+        text: messageText,
+        likesCount: 7,
+    }
+    state.profile.postsData.push(newPost)
+    rerenderEntireTree(state)
 }

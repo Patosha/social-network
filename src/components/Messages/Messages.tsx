@@ -12,6 +12,7 @@ const Messages = (props: MessagesTypeProps) => {
 
     let messagesElements = props.state.messagesData.map((message) =>
         <MessageItem
+            key={message.id}
             id={message.id}
             avatar={message.avatar}
             name={message.name}
