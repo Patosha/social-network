@@ -1,15 +1,16 @@
 import styles from './Messages.module.css';
 import React from "react";
 import {MessageItem} from "./MessageItem";
-import {MessageDataPropsType} from "../../index";
+import {MessagesType} from "../../redux/state";
+
 
 export type MessagesTypeProps = {
-    messagesData: Array<MessageDataPropsType>
+    state: MessagesType
 }
 
 const Messages = (props: MessagesTypeProps) => {
 
-    let messagesElements = props.messagesData.map((message) =>
+    let messagesElements = props.state.messagesData.map((message) =>
         <MessageItem
             id={message.id}
             avatar={message.avatar}

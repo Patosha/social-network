@@ -1,7 +1,12 @@
 import {NavLink} from 'react-router-dom';
 import styles from './Sidebar.module.css';
+import {StatePropsType} from "../../redux/state";
 
-const Sidebar = () => {
+export type SidebarTypeProps = {
+    // state: StatePropsType
+}
+
+const Sidebar = (props: SidebarTypeProps) => {
     return (
         <section className={styles.sidebar}>
 

@@ -1,9 +1,10 @@
 import styles from './Profile.module.css';
 import MyPosts from "../MyPosts/MyPosts";
-import {PostsDatePropsType} from "../../index";
+import {ProfileType} from "../../redux/state";
+
 
 export type ProfilePropsType = {
-    postsData: Array<PostsDatePropsType>
+    state: ProfileType
 }
 
 const Profile = (props: ProfilePropsType) => {
@@ -57,7 +58,7 @@ const Profile = (props: ProfilePropsType) => {
             </div>
 
             <MyPosts
-                postsData={props.postsData}
+                postsData={props.state.postsData}
             />
         </>
     )
