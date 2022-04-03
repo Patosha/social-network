@@ -28,6 +28,7 @@ const MyPosts = (props: MyPostsTypeProps) => {
     const addPostHandler = () => {
         let messageText = newPostElement.current.value;
         props.addPost(messageText)
+        newPostElement.current.value = ''
     }
 
     return (
@@ -51,5 +52,4 @@ const MyPosts = (props: MyPostsTypeProps) => {
         </div>
     )
 }
-
 export default MyPosts;

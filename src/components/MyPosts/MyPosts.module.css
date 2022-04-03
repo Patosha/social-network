@@ -28,6 +28,7 @@
     border: 0;
     margin-right: 10px;
     border-radius: 6px;
+    color: #fff;
 }
 
 .news::placeholder {
