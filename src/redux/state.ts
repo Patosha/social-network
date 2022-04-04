@@ -1,4 +1,6 @@
-import {rerenderEntireTree} from "../render";
+let rerenderEntireTree = (state: StatePropsType) => {
+
+}
 
 export type MessageDataPropsType = {
     id: number
@@ -110,7 +112,7 @@ export let state: StatePropsType = {
 
 export const addPost = (messageText: string) => {
 
-    let newPost = {
+    const newPost: PostsDatePropsType = {
         id: 5,
         name: 'Klark Kent',
         avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/01/man-ava5.jpg',
@@ -120,4 +122,8 @@ export const addPost = (messageText: string) => {
     }
     state.profile.postsData.push(newPost)
     rerenderEntireTree(state)
+}
+// 35 lesson
+export const subscribe = (observer: (state: StatePropsType) => void) => {
+    rerenderEntireTree = observer
 }

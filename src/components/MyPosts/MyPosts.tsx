@@ -23,12 +23,14 @@ const MyPosts = (props: MyPostsTypeProps) => {
         />
     )
 
-    let newPostElement = React.useRef() as React.MutableRefObject<HTMLTextAreaElement>
+    let newPostElement = React.createRef<HTMLTextAreaElement>()
 
     const addPostHandler = () => {
-        let messageText = newPostElement.current.value;
-        props.addPost(messageText)
-        newPostElement.current.value = ''
+
+        if (newPostElement.current) {
+            props.addPost(newPostElement.current.value)
+            newPostElement.current.value = '';
+        }
     }
 
     return (
