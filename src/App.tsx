@@ -4,11 +4,11 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Profile from "./components/Profile/Profile";
 import Messages from "./components/Messages/Messages";
-import {BrowserRouter, Route} from "react-router-dom";
+import {Route} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {addPost, StatePropsType} from "./redux/state";
+import {StatePropsType} from "./redux/state";
 
 
 export type AppPropsType = {
