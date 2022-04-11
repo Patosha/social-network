@@ -11,12 +11,11 @@ const rerenderEntireTree = (state: StatePropsType) => {
 
             <App
                 state={state}
-                addPost={store.addPost.bind(store)}
+                dispatch={store.dispatch.bind(store)}
             />
 
         </BrowserRouter>, document.getElementById('root')
     );
-
 }
 
 rerenderEntireTree(store.getState());

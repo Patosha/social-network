@@ -1,12 +1,11 @@
 import styles from './MyPosts.module.css';
 import React from "react";
 import Post from "./Post/Post";
-import {PostsDatePropsType} from "../../redux/state";
-
+import {AddPostActionPropsType, PostsDatePropsType} from "../../redux/state";
 
 export type MyPostsTypeProps = {
     postsData: Array<PostsDatePropsType>
-    addPost: (messageText: string) => void
+    dispatch: (action: AddPostActionPropsType) => void
 }
 
 const MyPosts = (props: MyPostsTypeProps) => {
@@ -28,7 +27,7 @@ const MyPosts = (props: MyPostsTypeProps) => {
     const addPostHandler = () => {
 
         if (newPostElement.current) {
-            props.addPost(newPostElement.current.value)
+            props.dispatch(newPostElement.current.value)
             newPostElement.current.value = '';
         }
     }
@@ -41,8 +40,7 @@ const MyPosts = (props: MyPostsTypeProps) => {
 
             <form action="#" className={styles.form}>
 
-                <textarea ref={newPostElement} className={styles.news} name="message" id="#" placeholder="your news..."
-                          required>
+                <textarea ref={newPostElement} className={styles.news} name="message" id="#" placeholder="your news...">
                 </textarea>
 
                 <button className={styles.button} type="button" onClick={addPostHandler}>

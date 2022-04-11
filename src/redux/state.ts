@@ -39,7 +39,21 @@ export type StatePropsType = {
     // sidebar: SidebarType
 }
 
-export let store = {
+export type AddPostActionPropsType = {
+    type: 'ADD-POST'
+    messageText: string
+}
+
+export type StorePropsType = {
+    _state: StatePropsType
+    _callSubscriber: (_state: StatePropsType) => void
+    getState: () => StatePropsType
+    subscribe: (callback: (state: StatePropsType) => void) => void
+    addPost: (messageText: string) => void
+    dispatch: (action: AddPostActionPropsType) => void
+}
+
+export let store: StorePropsType = {
     _state: {
         profile: {
             postsData: [
@@ -106,12 +120,17 @@ export let store = {
         //     ]
         // }
     },
+    _callSubscriber() {
+        console.log('State changed')
+    },
+
     getState() {
         return this._state
     },
-    _callSubscriber(state: StatePropsType) {
-        console.log('State changed')
+    subscribe(observer) {
+        this._callSubscriber = observer
     },
+
     addPost(messageText: string) {
 
         const newPost: PostsDatePropsType = {
@@ -122,11 +141,23 @@ export let store = {
             text: messageText,
             likesCount: 7,
         }
-       this._state.profile.postsData.push(newPost)
+        this._state.profile.postsData.unshift(newPost)
         this._callSubscriber(this._state)
     },
-    subscribe(observer: (state: StatePropsType) => void) {
-        this._callSubscriber = observer
+
+    dispatch(action) { // {type: 'ADD-POST'}
+        if (action.type === 'ADD-POST') {
+            const newPost: PostsDatePropsType = {
+                id: 5,
+                name: 'Klark Kent',
+                avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/01/man-ava5.jpg',
+                date: '18 июня 2020',
+                text: action.messageText,
+                likesCount: 7,
+            }
+            this._state.profile.postsData.push(newPost)
+            this._callSubscriber(this._state)
+        }
     }
 }
 // window.store = store;

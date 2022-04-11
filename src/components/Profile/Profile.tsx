@@ -1,11 +1,11 @@
 import styles from './Profile.module.css';
 import MyPosts from "../MyPosts/MyPosts";
-import {ProfileType} from "../../redux/state";
+import {AddPostActionPropsType, ProfileType} from "../../redux/state";
 
 
 export type ProfilePropsType = {
     state: ProfileType
-    addPost: (messageText: string) => void
+    dispatch: (action: AddPostActionPropsType) => void
 }
 
 const Profile = (props: ProfilePropsType) => {
@@ -60,7 +60,7 @@ const Profile = (props: ProfilePropsType) => {
 
             <MyPosts
                 postsData={props.state.postsData}
-                addPost={props.addPost}
+                dispatch={props.dispatch}
             />
         </>
     )
