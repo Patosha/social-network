@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './App.css';
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -8,14 +8,17 @@ import {Route} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import {AddPostActionPropsType, StatePropsType} from "./redux/state";
+import {AddPostActionPropsType, StatePropsType, store, StorePropsType} from "./redux/state";
 
 export type AppPropsType = {
-    state: StatePropsType
-    dispatch: (action: AddPostActionPropsType) => void
+    store: StorePropsType
+    // dispatch: (action: AddPostActionPropsType) => void
 }
 
-const App = (props: AppPropsType) => {
+const App: FC<AppPropsType> = ({store}) => {
+
+    let state = store.getState()
+
     return (
         <div className="container">
             <div className="app-wrapper">
@@ -29,13 +32,13 @@ const App = (props: AppPropsType) => {
                 <section className="hero">
                     <Route path='/profile' render={() =>
                         <Profile
-                            state={props.state.profile}
-                            dispatch={props.dispatch}
+                            state={state.profile}
+                            dispatch={store.dispatch.bind(store)}
                         />}
                     />
                     <Route path='/messages' render={() =>
                         <Messages
-                            state={props.state.messages}
+                            state={state.messages}
                         />}
                     />
                     <Route path='/news' render={() => <News/>}/>

@@ -27,7 +27,8 @@ const MyPosts = (props: MyPostsTypeProps) => {
     const addPostHandler = () => {
 
         if (newPostElement.current) {
-            props.dispatch(newPostElement.current.value)
+            // props.dispatch(newPostElement.current.value)
+            props.dispatch({ type: 'ADD-POST',messageText: string})
             newPostElement.current.value = '';
         }
     }
